@@ -1,0 +1,35 @@
+[app/ui]
+version = 9.0.5
+modtime = 1687298668.537105000
+
+[app/launcher]
+version = 9.0.5
+modtime = 1687298668.537656000
+
+[inputs/ml_parser%3A%2F%2FScreen%20Shots]
+owner = admin
+version = 9.2.1
+modtime = 1713725871.222853000
+
+[inputs/ml_parser%3A%2F%2FLicenses]
+owner = admin
+version = 9.2.1
+modtime = 1713725872.315975000
+
+[props/ml_parser/FIELDALIAS-ml_parser_FIELDALIAS]
+export = system
+owner = admin
+version = 9.2.1
+modtime = 1714153720.292402000
+
+[props/ml_parser/EVAL-lower_llm]
+export = system
+owner = admin
+version = 9.2.1
+modtime = 1714152444.847547000
+
+[props/ml_parser/EVAL-action]
+export = system
+owner = admin
+version = 9.2.1
+modtime = 1714154013.689962000

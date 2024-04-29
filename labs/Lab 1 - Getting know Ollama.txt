@@ -1,0 +1,53 @@
+﻿Lab 1 - Getting know Ollama
+
+
+1. Download and install Ollama from the following location.  https://ollama.com/
+Ollama is available for macOS, Linux and Windows.
+
+
+Usage:
+  ollama [flags]
+  ollama [command]
+
+
+Available Commands:
+  serve       Start ollama
+  create      Create a model from a Modelfile
+  show        Show information for a model
+  run         Run a model
+  pull        Pull a model from a registry
+  push        Push a model to a registry
+  list        List models
+  cp          Copy a model
+  rm          Remove a model
+  help        Help about any command
+
+
+Flags:
+  -h, --help      help for ollama
+  -v, --version   Show version information
+
+
+2. From a command prompt, pull the latest version of the llama3 model using the pull command.  Note: This command may take a few minutes to run.
+   1. ollama pull llama3
+
+
+3. List the installed models.  You should see the llama3 model installed.
+   1. ollama list
+
+
+4. Try out the llama3 model
+   1. Ollama run llama3
+   2. You should see a prompt line “>>>”
+   3. Enter “/?” to show the help menu
+   4. Enter “What is the meaning of life?”
+   5. Enter “/bye”
+
+
+5. Type writing a multiline prompts
+   1. Ollama run llama3
+   2. Enter “”””””  <- (3 quotes) then hit “renter”
+   3. “What is the best answer the following question.”, then hit “enter”
+   4. “””  
+   5. It should reply with an answer.
+   6. Exit or type “/bye”

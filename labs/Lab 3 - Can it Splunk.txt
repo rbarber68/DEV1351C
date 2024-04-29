@@ -1,0 +1,22 @@
+﻿Lab 3 - Can it Splunk?
+Lets see if the llama3 LLM can create a regular expression to glean some email addresses.
+
+
+1. In a command prompt, run “ollama run llama3”
+“””
+Create a regex expression that can identify and extract email addresses from various text formats. The emails may be embedded within sentences or listed outright. Examples include:
+"Please contact John Doe at john.doe@email.com for more details."
+"You can reach Jane at jane_smith123@workmail.net for support."
+"For more information, email us at info@buttercupgames.org or visit our website."
+"Alice Johnson's email: alice.j@buttercupgames.com."
+””
+The response should include the regular expression and a detail breakdown of the regex.
+Lets ask how we can use this in Splunk SPL
+
+
+2. >>>”How can we use this email regex in Splunk SPL?”
+The response should should you an example of how to use the rex SPL command in Splunk Query Language(SPL).
+
+
+3. >>>”How can we use the regex inside a Splunk props.conf file?”
+The response should give you all the details on how to create and use the regex a props.conf

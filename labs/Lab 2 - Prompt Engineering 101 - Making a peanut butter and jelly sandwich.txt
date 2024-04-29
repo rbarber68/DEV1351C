@@ -1,0 +1,65 @@
+﻿Lab 2 - Prompt Engineering 101 - Making a peanut butter and jelly sandwich
+
+
+1. Clarity is Key
+   1. The clearer and more detailed the prompt, the more useful and tailored the response.
+   2. Run the command “ollama run llama3”
+   3. “Provide me a receipt for making a peanut butter sandwich”
+   4. Compare the results the following
+   5. “Provide me instructions on making a peanut butter and jelly sandwitch.  I will be using whole wheat bread and sugarfree jelly.”
+
+
+2. Understand the User Needs
+   1. If the response is needed in JSON format make sure it’s included.
+   2. Add the following into the prompt. “return the results in JSON format”
+   3. Note the JSON may change each time it’s run
+   4. Include JSON formatting information in the prompt.
+   5. 
+
+
+
+3. Refining the prompt
+   1. Iterating on the prompt until you get the response that meets your needs.
+   2. “include all the ingredients in the json as well as each step”
+        
+
+
+4. Ask the LLM what the best prompt for future use.  Ask it to include formatting information to include int he prompt.
+   1. “Give me the prompt that I can use in the future to get these results.  Include any JSON formatting, using xxx as placeholders”
+
+
+Response:
+Here is a sample prompt you can use to generate these results:
+generate instructions for making a peanut butter and jelly sandwich using whole wheat bread and sugar-free jelly.
+include ingredients in the response.
+
+
+**JSON Formatting:**
+```json
+{
+  "instructions": [
+    {
+      "step": xxx,
+      "text": xxx,
+      "ingredients": [xxx, xxx]
+    }
+  ],
+  "ingredients": [
+    {
+      "name": xxx,
+      "quantity": xxx,
+      "unit": xxx
+    },
+    {
+      "name": xxx,
+      "quantity": xxx,
+      "unit": xxx
+    }
+  ]
+}
+```
+**Placeholders:**
+
+
+* `xxx` represents the step number, text description, and ingredients for each instruction.
+* `xxxx` represents the ingredient name, quantity, and unit of measurement.

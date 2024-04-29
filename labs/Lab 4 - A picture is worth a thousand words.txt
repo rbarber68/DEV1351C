@@ -1,0 +1,42 @@
+﻿Lab 4 - A picture is worth a thousand words.  Buttercup GO!
+Looking at output from the Buttercup GO! Game https://buttercup.rocks/
+
+
+1. Execute the in a command line, “ollama run llava”
+2. >>>”./buttercup_games.jpg Explain this image.”
+
+
+The response should be something like the following….
+This image features a pixel art illustration of a horse with wings, known
+as a pegasus. The horse is depicted with its wings spread, flying towards 
+the viewer. It's styled in a retro video game aesthetic, with blocky, 
+simplified shapes and a limited color palette that gives it an 8-bit 
+appearance.
+
+
+Below the horse, there is text that reads "BUTTERCUP GO!" The font is bold
+and playful, matching the pixel art style of the image. The phrase 
+suggests that this image might be related to a game or a series involving 
+a character named Buttercup. The overall design implies that it could be a
+graphic for a video game, possibly a logo or a promotional material for 
+"Buttercup Go!".
+
+
+3. >>>”””
+./save_game1.png  What was the user initials and score in this screenshot of their final score?  Reply in JSON.
+```json
+{
+ "user_initials": "{{INITIALS}}", // Placeholder for user's initials in JSON formatting
+ "score": {{SCORE}}, // Placeholder for the final score in JSON formatting
+}
+"""
+
+
+The results should be like the following:
+Added image './save_game1.png'
+```json
+{
+  "user_initials": "RLB",
+  "score": 15
+}
+```
