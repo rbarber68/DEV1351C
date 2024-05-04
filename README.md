@@ -1,4 +1,4 @@
-Splunk .conf 2024 Session Resources
+# Splunk .conf 2024 Session Resources
 
 
 Session ID: DEV1351C
