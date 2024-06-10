@@ -3,6 +3,7 @@ import glob
 import base64
 import requests as req
 import json
+import re
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "lib"))
 from splunklib.modularinput import *
 import splunklib
@@ -67,10 +68,9 @@ class MyScript(Script):
 
         # Use glob to find all files matching the pattern
         return glob.glob(pattern)
-    
+
     def process_file(self, file, location, model, prompt):
         # Set the Ollama host and timeout
-        #host = "localhost:11434"
         timeout = 60
 
         encoded_string = ""
@@ -90,9 +90,11 @@ class MyScript(Script):
 
         # Get the response
         response = request.json()
-        #return_string = response['response']
-        response['formatted_response'] = response['response'].split("```json")[1].split("```")[0].strip("\n")
-        # Print the response
+        try:
+            response['formatted_response'] = "{" + response['response'].split("{")[1].split("}")[0].strip("\n") + "}"
+            response.update(json.loads(response['formatted_response']))
+        except:
+            pass
         return response
 
     def stream_events(self, inputs, ew):

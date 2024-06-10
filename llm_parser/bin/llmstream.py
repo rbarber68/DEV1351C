@@ -6,18 +6,12 @@ from splunklib.searchcommands import dispatch, StreamingCommand, Configuration, 
 
 @Configuration()
 class llmstream(StreamingCommand):
-    
-    fieldname = Option(
-        doc='''
-        **Syntax:** **fieldname=***<fieldname>*
-        **Description:** Name of the field that will hold the genre name''',
-        require=True, validate=validators.Fieldname())
-    
+
     model = Option(require=True)
     prompt = Option(require=True)
     evalfieldname = Option(require=True)
+    fieldname = Option(require=True)
     
-
     def process_file(self, field_data):
         timeout = 60
         location="http://localhost:11434/api/generate"
@@ -26,7 +20,7 @@ class llmstream(StreamingCommand):
         request = req.post(
             location,
             json={"model": self.model, 
-                "prompt": self.prompt + "\n " + field_data, 
+                "prompt": self.prompt + "\r\r" + field_data, 
                 "stream": False},
             timeout=timeout,
         )
